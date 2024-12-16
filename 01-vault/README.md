@@ -3,5 +3,8 @@ You are looking through an old version of the OpenZeppelin implementation of ERC
 
 
 - a) Describe the vulnerability and the payoffs for an attacker.
+An attacker listens to the mempool for incoming transactions. A user(s) submits a transaction (e.g. via Uniswap) with high slippage. If the transaction or recent incoming transactions cause price fluctuations the attacker (bot) can initiate a high gas fee transaction. This secures priority leading to a cheaper purchase price whilst the subsequent victim pays a higher price for e.g. a token.   
+
 - b)  Produce code that can check if this vulnerability has occurred in the past and determine how much value was lost, if any.
+
 - c)  Write code for the bot that can carry out the exploit (don’t worry about returning user funds).
